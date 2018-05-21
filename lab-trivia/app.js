@@ -3,23 +3,21 @@ var saludarUsario = document.getElementById('bienvenida');
 var mostrarResultados = document.getElementById('contenedorPrincipal');
 var respuestasCorrectas = document.getElementById('respuestasCorrectas');
 var respuestasIncorrectas= document.getElementById('respuestasIncorrectas');
-
+var first = document.getElementById("first");
+mostrarResultados.style.visibility= "hidden";
 
 var nombreUsuario = prompt("Ingresa tu nombre:");
 saludarUsario.innerHTML = "😊 Bienvenid@ " + nombreUsuario + " 😊" ;
 
-var iniciarPartida = parseInt(prompt("Ingresa el número que corresponda a tu respuesta \n ¿Quieres iniciar la partida? \n 1.Si \n 2.No"));
+//iniciar partida
+var boton = document.getElementById("boton");
+boton.addEventListener("click", aceptar);
 
-// Evaluamos las respuestas del usuario (para iniciar el juego)
-
-if (iniciarPartida == 2) {//CASO 1; EN EL QUE EL USUARIO NO QUIERA JUGAR
-  mostrarResultados.innerHTML =  "<h1>Gracias por visitarnos, nos vemos la próxima 😉 </h1>";
-} 
-else {//Caso en el que SI quiera continuar con el juego
+function aceptar(){
+  first.style.display = "none";
+  mostrarResultados.style.visibility= "visible";
   respuestasCorrectas.innerHTML = "<h4> Preguntas correctas </h4>";
   respuestasIncorrectas.innerHTML = "<h4> Preguntas incorrectas </h4>";
-
-  //alert("Recuerda ingresar el número que corresponde a tu respuesta 😉");
 
   /* PRIMERA PREGUNTA */
   var primeraPregunta = parseInt(prompt("1.¿Cuál es la bebida preferida de Gonzalo? \n 1. Agua \n 2. Cerveza \n 3. Vino"));
@@ -36,4 +34,19 @@ else {//Caso en el que SI quiera continuar con el juego
   } else {
     respuestasIncorrectas.innerHTML += "<br> 2.¿Qué es lo que más le gusta hacer a Lulú? <br> <strong>Respuesta correcta:</strong> 🎤 Cantar 🎤";
   }
+
 }
+
+var boton2 = document.getElementById("boton2");
+boton2.addEventListener("click", cancelar);
+var cancel = document.getElementById("cancel");
+
+function cancelar (){
+  first.style.display= "none";
+  mostrarResultados.style.display= "none";
+  cancel.innerHTML = "<h1>Gracias por visitarnos, nos vemos la próxima 😉 </h1>";
+}
+
+
+
+

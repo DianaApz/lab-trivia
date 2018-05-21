@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Laboratrivia</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+ <head>
+   <meta charset="UTF-8">
+   <title>Laboratrivia</title>
+   <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
   <!-- CABECERA -->
-  <header>
-    <h1> 🌎 LABORATRIVIA 🌎 </h1>
-    <h3 id="bienvenida"> BIENVENID@ </h3><!-- Este elemento nos permite agregar el nombre del usuario -->
+   <header>
+     <h1> 🌎 LABORATRIVIA 🌎 </h1>
+     <h3 id="bienvenida"> BIENVENID@ </h3><!-- Este elemento nos permite agregar el nombre del usuario -->
 
-    <hr/>
-  </header>
+     <hr/>
+   </header>
+   <section id="first">
+     <div>
+       <h2>¿Quieres iniciar la partida?</h2>
+       <button id="boton">Aceptar</button>
+       <button id="boton2">Cancelar</button>
+      </div>
+   </section>
+
+   <p id="cancel"></p>
+   
   <!-- RESULTADOS -->
-  <section>
-    <div id="contenedorPrincipal"><!-- Nos permite ver el marcador -->
-      <h3>RESULTADOS</h3>
-      <div id="respuestasCorrectas" class="marcador">
+   <section>
+     <div id="contenedorPrincipal"><!-- Nos permite ver el marcador -->
+       <h3>RESULTADOS</h3>
+       <div id="respuestasCorrectas" class="marcador">
         
-      </div><!-- Se visualizan las respuestas correctas -->
-      <div id="respuestasIncorrectas"  class="marcador">
+       </div><!-- Se visualizan las respuestas correctas -->
+       <div id="respuestasIncorrectas"  class="marcador">
         
-      </div><!-- Nos permite visualizar las respuestas incorrectas -->
-    </div>
-  </section>
-  <script type="text/javascript" src="app.js"></script>
-</body>
+       </div><!-- Nos permite visualizar las respuestas incorrectas -->
+     </div>
+   </section>
+   <script type="text/javascript" src="app.js"></script>
+ </body>
 </html>
